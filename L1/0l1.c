@@ -20,7 +20,7 @@
 // #define ZAD2
 #define ZAD3
 
-int funkcjaZliczająca(const char* charF, const struct stat* statF, int intF, struct FTW* ftwF) {}
+int funkcjaZliczająca(const char* charF, const struct stat* statF, int intF, struct FTW* ftwF) { return EXIT_SUCCESS; }
 
 int numberOfDifferentFilesInCurrentDirPrintf()
 {
