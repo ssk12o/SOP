@@ -4,6 +4,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <ftw.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -54,3 +55,38 @@ ssize_t bulk_write(int fd, char* buf, size_t count)
     } while (count > 0);
     return len;
 }
+int menu(int argc, char** argv)
+{
+    int c;
+
+    int i = 0, remove;
+    char *package, *new_env_name, **ex_env_name;
+
+    while ((c = getopt(argc, argv, "c:v:i:r")) != -1)
+    {
+        switch (c)
+        {
+            case 'c':
+                new_env_name = optarg;
+                break;
+            case 'v':
+                ex_env_name[i++] = optarg;
+                break;
+            case 'i':
+                package = optarg;
+                break;
+            case 'r':
+                remove = true;
+                break;
+            case '?':
+                fprintf(stderr, "Wrong arguments");
+                exit(EXIT_FAILURE);
+            default:
+                continue;
+        }
+    }
+}
+
+// snprintf();
+//     strcpy();
+//     strcat();
