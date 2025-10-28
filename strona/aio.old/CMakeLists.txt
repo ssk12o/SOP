@@ -1,0 +1,10 @@
+link_libraries(rt)
+
+add_executable(aio_read aio_read.c)
+add_executable(aio_suspend aio_suspend.c)
+add_executable(listio_wait listio_wait.c)
+add_executable(listio_nowait listio_nowait.c)
+add_executable(signal_notification signal_notification.c)
+add_executable(thread_notification thread_notification.c)
+add_executable(listio_notification listio_notification.c)
+add_executable(aio_cancel aio_cancel.c)

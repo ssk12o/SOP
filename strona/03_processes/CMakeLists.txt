@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.10)
+
+add_executable(vm vm.c)
+add_executable(cs cs.c)
+add_executable(hello hello.c)
+add_executable(wait wait.c)
+add_executable(orphan orphan.c)
+add_executable(zombie zombie.c)
+add_executable(exec exec.c)
+add_executable(env env.c)
+add_executable(clone clone.c)
