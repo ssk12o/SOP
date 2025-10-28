@@ -87,6 +87,40 @@ int menu(int argc, char** argv)
     }
 }
 
-// snprintf();
+//      snprintf();
 //     strcpy();
 //     strcat();
+
+//      1. Funkcja memset wypełnia blok pamięci określoną wartością. Wywołanie: memset(pointer,
+// value, size). Pointer to początek obszaru pamięci, value to wartość, którą ustawiamy, a size to
+// liczba bajtów.
+
+//      2. Funkcja memcpy kopiuje dane z jednego miejsca w pamięci do drugiego. Wywołanie:
+// memcpy(destination, source, size). Destination to miejsce docelowe, source to dane do
+// skopiowania, a size to liczba bajtów. Przykład: memcpy(manager->buffer + manager-
+// >buffer_len, data, data_len).
+
+//      3. Funkcja strstr wyszukuje pierwsze wystąpienie podłańcucha w ciągu znaków. Wywołanie:
+// strstr(text, subtext). text to ciąg, w którym szukamy, a subtext to podłańcuch, który chcemy
+// znaleźć. Zwraca wskaźnik do pierwszego wystąpienia podłańcucha lub NULL, jeśli nie
+// znaleziono.
+
+//      4. Funkcja strncpy_s kopiuje określoną liczbę znaków z jednego ciągu do drugiego,
+// zapewniając bezpieczeństwo przed przepełnieniem bufora. Wywołanie: strncpy_s(destination,
+// destsz, source, count). destination to miejsce docelowe, destsz to rozmiar bufora docelowego,
+// source to źródło, a count to liczba znaków do skopiowania. Gwarantuje, że ciąg docelowy
+// będzie null-terminowany.
+
+//      5. Funkcja strlen oblicza długość ciągu znaków (liczbę znaków przed pierwszym znakiem null-
+// terminującym). Wywołanie: strlen(str). Zwraca liczbę znaków w ciągu str, nie wliczając znaku
+// null-terminującego.
+
+//      6. Funkcja _countof oblicza liczbę elementów w statycznej tablicy. Wywołanie: _countof(array).
+// array to statyczna tablica, której liczba elementów jest obliczana. Funkcja jest przydatna do
+// określenia limitów operacji na tablicach, takich jak kopiowanie danych, aby uniknąć
+// przepełnienia bufora.
+
+// 7. Funkcja snprintf pozwala na zapisanie sformatowanego tekstu, zamiast wyświetlania go na
+// konsoli, do zmiennej. Na przykład, zamiast używać `printf` do wypisania tekstu, możesz
+// zapisać go do bufora, co pozwala na dalsze przetwarzanie lub przekazywanie tego tekstu w
+// programie.
